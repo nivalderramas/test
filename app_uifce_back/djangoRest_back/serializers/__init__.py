@@ -1,0 +1,7 @@
+from .ActividadSerializer import ActividadSerializer
+from .EquiposDeTrabajoSerializer import EquiposDeTrabajoSerializer
+from .RolSerializer import RolSerializer
+from .AsignacionSerializer import AsignacionSerializer
+from .EstadoSerializer import EstadoSerializer
+from .SubActividadSerializer import SubActividadSerializer
+from .UsuarioSerializer import UsuarioSerializer
