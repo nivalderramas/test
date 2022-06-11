@@ -4,3 +4,4 @@ from .EstadoView import CrearEstado, RUDEstado
 from .RolesView import CrearRol, RUDRol
 from .SubActividadView import ListarSubActividades, ActualizarSubActividades, CrearSubActividades, BorrarSubActividades
 from .UsuarioView import ListarUsuarios, ActualizarFotoUsuario, ActualizarUsuario, CrearUsuario, BorrarUsuario
+from .isAuthenticatedView import *

@@ -4,7 +4,8 @@ from rest_framework import generics
 
 """ Permisos para todo tipo de Usuario """
 
-## Lista de las actividades 
+
+## Lista de las actividades
 
 class ListarActividades(generics.ListAPIView):
     queryset = Actividad.objects.all()
@@ -12,10 +13,12 @@ class ListarActividades(generics.ListAPIView):
 
 """ Permisos para Master, Coordi y admin """
 
+
 ## Creacion de actividades
 
 class CrearActividades(generics.CreateAPIView):
     serializer_class = ActividadSerializer
+
 
 ## Ver, Actualizar y borrar actividades
 

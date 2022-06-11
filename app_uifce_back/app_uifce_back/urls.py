@@ -16,8 +16,9 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
-from djangoRest_back.views import ListarActividades, CrearActividades, RUDActividades, ListarEquiposTrabajo, CrearEquiposTrabajo, RUDEquiposTrabajo, CrearEstado, RUDEstado, CrearRol, RUDRol, ListarSubActividades, ActualizarSubActividades, CrearSubActividades, BorrarSubActividades, ListarUsuarios, ActualizarFotoUsuario, ActualizarUsuario, CrearUsuario, BorrarUsuario
+from django.urls import path, include
+from djangoRest_back.views import *
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -32,7 +33,7 @@ urlpatterns = [
 
     path('create-state/', CrearEstado.as_view()),
     path('RUD-state/', RUDEstado.as_view()),
-    
+
     path('list-activities/', CrearRol.as_view()),
     path('create-activities/', RUDRol.as_view()),
 
@@ -45,6 +46,9 @@ urlpatterns = [
     path('RUD-state/', ActualizarFotoUsuario.as_view()),
     path('RUD-state/', ActualizarUsuario.as_view()),
     path('RUD-state/', CrearUsuario.as_view()),
-    path('RUD-state/', BorrarUsuario.as_view())
+    path('RUD-state/', BorrarUsuario.as_view()),
+
+    path('', include('dj_rest_auth.urls')),
+    path('test/', isAuthenticatedView.as_view()),
     
 ]
